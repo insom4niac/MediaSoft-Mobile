@@ -1,0 +1,64 @@
+﻿Задания к лекции 1.
+ 
+1. Установить intellij IDEA (или любую другую удобную вам среду разработки)
+https://www.jetbrains.com/idea/download/?section=windows
+
+
+2. Установить JDK 11 или более новой версии
+Это легко делается через Intellij IDEA
+https://www.jetbrains.com/guide/java/tips/download-jdk/#
+
+
+3. Задача: Создайте класс BankAccount 
+Поля:
+* имя владельца (строка);
+* баланс (целочисленный);
+* дата открытия (LocalDateTime);
+* поле-флажок заблокирован ли счет (boolean).
+
+
+Действия:
+        Добавьте один конструктор, который принимает только один параметр - имя владельца. Не забудьте инициализировать остальные поля начальными значениями.
+
+
+Добавьте методы:
+* deposit(amount) — пополнение счета.
+* withdraw(amount) — снятие денег.
+* transfer(otherAccount, amount) — перевод денег на другой счет (с текущего счета снять amount и зачислить amount на счет otherAccount).
+
+
+Каждый метод должен возвращать значение типа boolean - успешно или неуспешно была проведена операция.
+
+
+Проверьте реализованные методы. Помните, что нельзя перевести и снимать сумму бОльшую, чем есть на счете (поле “баланс”).
+
+
+Доп. задания:
+* Реализуйте метод toString класса Object для вывода в консоль информацию о счете
+
+
+* Добавьте в класс поле number - номер счета в формате XXXXXXXX, где X - цифра от 0 до 9. Во время создания объекта сгенерируйте его (см. класс Random).
+
+
+* Реализуйте метод equals (можно заодно метод hashcode) для сравнения счетов.
+
+
+Ссылки на материал если материала на лекции не хватило:
+1. Про Java: https://ru.hexlet.io/blog/posts/yazyk-programmirovaniya-java-osobennosti-populyarnost-situatsiya-na-rynke-truda
+2. Про типизацию: https://habr.com/ru/articles/161205/
+3. Про ООП: https://blog.skillfactory.ru/glossary/oop-obektno-orientirovannoe-programmirovanie/
+4. Классы, конструкторы, экземпляры: https://metanit.com/java/tutorial/3.1.php
+5. Класс Object: https://developer.alexanderklimov.ru/android/java/object.php
+6. Очень подробно про ветвление: https://tproger.ru/articles/uslovnye-operatory-v-java
+7. Модификаторы доступа: https://javarush.com/groups/posts/1988-modifikatorih-dostupa-private-protected-default-public
+
+
+
+
+
+
+Не было рассказано на лекции, но важно:
+
+
+Операции сравнения применяются только для примитивов, для ссылочных типов они сравнивают значения ССЫЛОК, а не их содержимое. Для сравнения ссылочных типов используют метод equals из класса Object.
+Подробнее: https://javarush.com/groups/posts/68573-osnovih-equals
